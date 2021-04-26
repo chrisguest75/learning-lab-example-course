@@ -1,0 +1,16 @@
+title: learning-lab-example
+description: This is a quick test of what a learning lab looks like
+template:
+  repo: learning-lab-example-template
+  name: learning-lab-example
+before:
+  - type: createIssue
+    title: Welcome!
+    body: new-issue.md
+steps:
+  - title: First step
+    description: The first step in your course
+    event: issues.assigned
+    link: '{{ repoUrl }}'
+    actions:
+      - type: closeIssue
